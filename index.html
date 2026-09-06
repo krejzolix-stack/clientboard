@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ClientBoard - Mini CRM</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+	<div>
+		<span class="small">MINI CRM</span>
+		<h1>ClientBoard</h1>
+	</div>
+	<div class="counter">
+		<span>Klienci</span>
+		<strong id="clientCount">0</strong>
+	</div>
+</header>
+
+<main>
+	<section class="panel">
+		<span class="section-label">NOWY KLIENT</span>
+		<h2>Dodaj klienta</h2>
+		<form id="clientForm">
+			<input id="nameInput" type="text" placeholder="Imię / nazwa firmy" required>
+			<input id="emailInput" type="email" placeholder="Email" required>
+			<select id="statusInput">
+				<option value="Nowy">Nowy</option>
+				<option value="W trakcie">W trakcie</option>
+				<option value="Gotowe">Gotowe</option>
+			</select>
+			<input id="noteInput" type="text" placeholder="Krótka notatka">
+			<button type="submit">Dodaj klienta</button>
+		</form>
+	</section>
+
+	<section class="panel">
+		<div class="toolbar">
+			<div>
+				<span class="section-label">BAZA KLIENTÓW</span>
+				<h2>Klienci</h2>
+			</div>
+			<div class="toolbar-controls">
+				<input id="searchInput" type="text" placeholder="Szukaj klienta...">
+				<select id="filterInput">
+					<option value="all">Wszystkie</option>
+					<option value="Nowy">Nowy</option>
+					<option value="W trakcie">W trakcie</option>
+					<option value="Gotowe">Gotowe</option>
+				</select>
+			</div>
+		</div>
+		<div id="clientList"></div>
+		<div id="emptyState" class="empty">Brak klientów.</div>
+	</section>
+</main>
+
+<footer>ClientBoard © 2026 • Projekt demonstracyjny</footer>
+<script src="script.js"></script>
+</body>
+</html>
